@@ -1,26 +1,260 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* variables */
+:root {
+  --clr-primary-400: hsl(26, 100%, 55%);
+  --clr-primary-200: hsl(25, 100%, 94%);
+  --clr-neutral-900: hsl(0, 0%, 0%);
+  --clr-neutral-700: hsl(220, 13%, 13%);
+  --clr-neutral-400: hsl(219, 9%, 45%);
+  --clr-neutral-300: hsl(220, 14%, 75%);
+  --clr-neutral-200: hsl(223, 64%, 98%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  /* border-color */
+  --border-color: var(--clr-neutral-200);
+  /* background-colors */
+  --bg-primary: var(--clr-primary-400);
+  --bg-primary-hover: var(--clr-primary-200);
+  --bg-backdrop: var(--clr-neutral-900);
+  /* text-colors */
+  --text-primary: var(--clr-neutral-700);
+  --text-secondary: var(--clr-neutral-400);
+  --text-base: var(--clr-neutral-300);
+  /* font-family */
+  --ff-main: "Kumbh Sans", sans-serif;
+  /* font-weights */
+  --fw-semibold: 400;
+  --fw-bold: 700;
+  /* font-sizes */
+  --fs-base: 1rem;
+  --fs-md: 2rem;
+  --fs-lg: 3rem;
+  /* spacing */
+  --padding-inline-page: 10em;
+  --gap-1: 1em;
+  --gap-2: 2em;
+  --gap-4: 4em;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+/* base */
+*::before,
+*::after {
   box-sizing: border-box;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--ff-main);
+  font-size: var(--fs-base);
+  background-color: var(--clr-neutral-100);
+  padding-inline: var(--padding-inline-page);
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-  body {
-    color: white;
-    background: black;
+}
+/* text color */
+.text-primary {
+  color: var(--text-primary);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}
+.text-base {
+  color: var(--text-base);
+}
+/* font sizes */
+.fs-base {
+  font-size: var(--fs-base);
+}
+.fs-md {
+  font-size: var(--fs-md);
+}
+.fs-lg {
+  font-size: var(--fs-lg);
+}
+/* font weight */
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-semibold {
+  font-weight: var(--fw-semibold);
+}
+/* text alignment */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+/* text decoration */
+.decoration-none {
+  text-decoration: none;
+}
+.text-underline {
+  text-decoration: underline;
+}
+.text-line-through {
+  text-decoration: line-through;
+}
+/* Layout */
+.header {
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-4);
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--border-color);
+}
+.header .nav-item:hover {
+      color: var(--text-primary);
+    }
+.header .avatar-image {
+    width: 2.5rem;
+    height: 2.5rem;
+    box-sizing: border-box;
   }
+.header .avatar-image:hover {
+      outline: 2.5px solid var(--clr-primary-400);
+    }
+.container {
+  max-width: 100%;
+  height: 100%;
+}
+.product-page {
+  display: flex;
+}
+/* Utilities */
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.display-none {
+  display: none;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-evenly {
+  justify-content: space-evenly;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-center {
+  align-items: center;
+}
+.bg-white {
+  background-color: var(--clr-neutral-100);
+}
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+.bg-primary:hover {
+  background-color: var(--bg-primary-hover);
+}
+.bg-backdrop {
+  background-color: var(--bg-backdrop);
+  opacity: 0.75;
+}
+.bg-none {
+  background-color: transparent;
+}
+.list-disc {
+  list-style-type: disc;
+}
+.list-number {
+  list-style-type: decimal;
+}
+.rounded-full {
+  border-radius: 100%;
+}
+.border-none {
+  border: none;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.gap-1 {
+  gap: var(--gap-1);
+}
+.gap-2 {
+  gap: var(--gap-2);
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.fixed {
+  position: fixed;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
 }

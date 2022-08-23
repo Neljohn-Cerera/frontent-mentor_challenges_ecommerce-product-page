@@ -1,0 +1,23 @@
+.header {
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-4);
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--border-color);
+
+  & .nav-item {
+    &:hover {
+      color: var(--text-primary);
+    }
+  }
+  & .avatar-image {
+    width: 2.5rem;
+    height: 2.5rem;
+    box-sizing: border-box;
+    &:hover {
+      outline: 2.5px solid var(--clr-primary-400);
+    }
+  }
+}
