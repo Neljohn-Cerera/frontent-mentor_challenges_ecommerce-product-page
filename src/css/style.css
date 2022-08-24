@@ -2,20 +2,25 @@
 @import "abstracts/variables.css";
 /* base */
 @import "base/reset.css";
+@import "base/media-queries.css";
 @import "base/typography.css";
-/* Layout */
+/* layout */
 @import "layouts/header.css";
 @import "layouts/main.css";
 @import "layouts/product-page.css";
-/* Utilities */
-@import "utilities/flex.css";
+/* compositions */
+@import "compositions/flex.css";
+/* utilities */
+@import "utilities/text.css";
 @import "utilities/display.css";
-@import "utilities/justify-content.css";
-@import "utilities/align-items.css";
+@import "utilities/content.css";
+@import "utilities/items.css";
 @import "utilities/background.css";
-@import "utilities/list-style.css";
+@import "utilities/list.css";
 @import "utilities/border.css";
 @import "utilities/cursor.css";
 @import "utilities/margin.css";
+@import "utilities/padding.css";
 @import "utilities/gap.css";
+@import "utilities/height.css";
 @import "utilities/position.css";

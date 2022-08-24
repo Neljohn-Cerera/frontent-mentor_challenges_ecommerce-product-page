@@ -7,28 +7,46 @@
   --clr-neutral-300: hsl(220, 14%, 75%);
   --clr-neutral-200: hsl(223, 64%, 98%);
   --clr-neutral-100: hsl(0, 0%, 100%);
-  /* border-color */
+  /* border */
   --border-color: var(--clr-neutral-200);
-  /* background-colors */
+  /* background */
   --bg-primary: var(--clr-primary-400);
   --bg-primary-hover: var(--clr-primary-200);
   --bg-backdrop: var(--clr-neutral-900);
-  /* text-colors */
+  /* text */
   --text-primary: var(--clr-neutral-700);
   --text-secondary: var(--clr-neutral-400);
   --text-base: var(--clr-neutral-300);
-  /* font-family */
   --ff-main: "Kumbh Sans", sans-serif;
-  /* font-weights */
-  --fw-semibold: 400;
+  --fw-base: 400;
   --fw-bold: 700;
-  /* font-sizes */
   --fs-base: 1rem;
   --fs-md: 2rem;
   --fs-lg: 3rem;
   /* spacing */
-  --padding-inline-page: 10em;
-  --gap-1: 1em;
-  --gap-2: 2em;
-  --gap-4: 4em;
+  --flex-gap-default: 1em;
+  --flex-gap-sm: 1em;
+  --flex-gap-md: 2em;
+  --flex-gap-lg: 2.5em;
+  --flex-gap-xl: 4em;
+  --flex-gap-xxl: 5em;
+  --page-padding-y-default: 0px;
+  --page-padding-y-sm: 0px;
+  --page-padding-y-md: 2.5em;
+  --page-padding-y-lg: 5em;
+  --page-padding-y-xl: 7.5em;
+  --page-padding-y-xxl: 10em;
 }
+@custom-selector :--headings h1, h2, h3, h4;
+@custom-selector :--details p;
+
+/* default max 375px */
+@custom-media --br-sm-only (23.4375em<= width <= 34.125em); /* 375px to 576px */
+@custom-media --br-md-only (34.125em <= width <= 48em); /* 576px to 768px */
+@custom-media --br-lg-only (48em <= width <= 62em); /* 768px to 992px */
+@custom-media --br-xl-only (62em <= width <= 87.5em); /* 992px to 1200px */
+
+@custom-media --br-max-md (max-width: 48em); /* 0 to 768px */
+@custom-media --br-min-md (min-width: 34.125em); /* 576px plus */
+@custom-media --br-min-lg (min-width: 48em); /* 768px plus */
+@custom-media --br-min-xxl (min-width: 87.5em); /* 1200px plus */

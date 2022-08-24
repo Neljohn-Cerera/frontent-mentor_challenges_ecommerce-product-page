@@ -1,6 +1,30 @@
-.gap-1 {
-  gap: var(--gap-1);
+.gap-header {
+  gap: var(--flex-gap-default);
+
+  @media (--br-sm-only) {
+    gap: var(--flex-gap-sm);
+  }
+  @media (--br-md-only) {
+    gap: var(--flex-gap-md);
+  }
+  @media (--br-lg-only) {
+    gap: var(--flex-gap-lg);
+  }
+  @media (--br-xl-only) {
+    gap: var(--flex-gap-xl);
+  }
+  @media (--br-min-xxl) {
+    gap: var(--flex-gap-xxl);
+  }
 }
-.gap-2 {
-  gap: var(--gap-2);
+
+.gap-header__right {
+  gap: var(--flex-gap-sm);
+
+  @media (--br-md-only) {
+    gap: var(--flex-gap-md);
+  }
+  @media (--br-min-lg) {
+    gap: var(--flex-gap-sm);
+  }
 }

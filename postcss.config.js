@@ -2,6 +2,9 @@ module.exports = {
   plugins: {
     "postcss-import": {},
     "postcss-flexbugs-fixes": {},
+    "postcss-custom-selectors": {},
+    // cssnano: {},
+    "postcss-custom-media": {},
     "postcss-preset-env": {
       autoprefixer: {
         flexbox: "no-2009",

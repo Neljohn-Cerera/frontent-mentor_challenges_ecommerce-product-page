@@ -1,0 +1,39 @@
+.flex-flow-row-gap-1 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-1);
+}
+.flex-flow-column-gap-1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-1);
+}
+.flex-flow-row-gap-2 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-1);
+}
+.flex-flow-column-gap-2 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-1);
+}
+.flex-flow-row-gap-4 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-4);
+}
+.flex-flow-column-gap-4 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-4);
+}
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}

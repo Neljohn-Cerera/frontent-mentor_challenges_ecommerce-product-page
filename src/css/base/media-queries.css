@@ -1,0 +1,18 @@
+body {
+  padding-inline: var(--page-padding-y-default);
+  @media (--br-sm-only) {
+    padding-inline: var(--page-padding-y-sm);
+  }
+  @media (--br-md-only) {
+    padding-inline: var(--page-padding-y-md);
+  }
+  @media (--br-lg-only) {
+    padding-inline: var(--page-padding-y-lg);
+  }
+  @media (--br-xl-only) {
+    padding-inline: var(--page-padding-y-xl);
+  }
+  @media (--br-min-xxl) {
+    padding-inline: var(--page-padding-y-xxl);
+  }
+}

@@ -17,13 +17,11 @@ html:focus-within {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
   font-family: var(--ff-main);
-  font-size: var(--fs-base);
   background-color: var(--clr-neutral-100);
-  padding-inline: var(--padding-inline-page);
 }
 
 /* A elements that don't have a class get default styles */
