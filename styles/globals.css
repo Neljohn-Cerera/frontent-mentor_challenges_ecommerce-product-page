@@ -66,7 +66,7 @@ html:focus-within {
 }
 body {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   text-rendering: optimizeSpeed;
   font-family: var(--ff-main);
   background-color: var(--clr-neutral-100);
@@ -139,6 +139,59 @@ p {
   font-size: var(--fs-base);
   line-height: 1.5;
 }
+/* components */
+.product-thumbnail {
+  height: 350px;
+  width: 400px;
+}
+.product-thumbnail img {
+    border-radius: 10px;
+  }
+@media (max-width: 48em) {
+.product-thumbnail {
+    display: none;
+}
+  }
+.product-images-list {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.product-image {
+  height: 80px;
+  width: 80px;
+}
+.product-image img {
+    border-radius: 10px;
+  }
+.product-image:hover {
+    border-radius: 13px;
+    opacity: 0.5;
+    /* border: 2px solid var(--bg-primary); */
+  }
+@media (max-width: 48em) {
+.product-image {
+    border-radius: 0px;
+}
+  }
+.product-details {
+  position: relative;
+}
+.product-details h1 {
+    line-height: 1.1;
+  }
+.product-details::before {
+    position: absolute;
+    color: var(--bg-primary);
+    content: "sneaker company";
+    text-transform: uppercase;
+    top: 0;
+    bottom: 0;
+    margin-top: 45px;
+    font-weight: var(--fw-bold);
+    font-size: 14px;
+  }
 /* layout */
 .header {
   display: flex;
@@ -252,10 +305,45 @@ p {
   max-width: 100%;
   height: 100%;
 }
-.product-page {
-  flex: 1 1;
-  display: flex;
+.container {
+  padding: 60px;
 }
+@media (max-width: 48em) {
+.container {
+    padding: 0px;
+}
+  }
+.product-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.product-page .product-images {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+.product-page .product-details {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    padding-block: 50px;
+  }
+@media (max-width: 48em) {
+.product-page {
+    display: flex;
+    flex-direction: column;
+}
+  }
+@media (min-width: 34.125em) and (max-width: 48em) {
+.product-page {
+    flex-direction: column;
+}
+  }
 /* compositions */
 .flex-flow-row-gap-1 {
   display: flex;

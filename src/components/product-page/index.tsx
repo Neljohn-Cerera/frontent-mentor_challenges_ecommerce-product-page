@@ -1,58 +1,82 @@
 import Image from "next/image";
 import React from "react";
-import { IconCart, IconMinus, IconPlus } from "../../assets/icons";
+import { IconMinus, IconPlus } from "../../assets/icons";
 import {
   img_product_1,
   img_product_2,
   img_product_3,
   img_product_4,
-  img_product_1_thumbnail,
 } from "../../assets/images";
 
 const CProduct = () => {
   return (
-    <section className="flex">
+    <section className="product-page">
       <div className="product-images" aria-label="Container for the Products">
-        <Image
-          src={img_product_1_thumbnail}
-          alt="Product Shoes Thumbnail"
-          width={500}
-          height={500}
-        />
-        <div className="product-images-list">
+        <div
+          className="[ product-thumbnail ] [ relative cursor-pointer ]"
+          title="Product Thumbnail"
+        >
           <Image
-            className="product-image"
             src={img_product_1}
             alt="Product Shoes Thumbnail"
-            width={100}
-            height={100}
+            layout="fill"
+            role="button"
           />
-          <Image
-            className="product-image"
-            src={img_product_2}
-            alt="Product Shoes Thumbnail"
-            width={100}
-            height={100}
-          />
-          <Image
-            className="product-image"
-            src={img_product_3}
-            alt="Product Shoes Thumbnail"
-            width={100}
-            height={100}
-          />
-          <Image
-            className="product-image"
-            src={img_product_4}
-            alt="Product Shoes Thumbnail"
-            width={100}
-            height={100}
-          />
+        </div>
+
+        <div role="list" className="product-images-list">
+          <div
+            className="[ product-image ] [ relative cursor-pointer ]"
+            title="Product 1"
+          >
+            <Image
+              src={img_product_1}
+              alt="Product Shoes 1"
+              layout="fill"
+              role="button"
+            />
+          </div>
+          <div
+            className="[ product-image ] [ relative cursor-pointer ]"
+            title="Product 2"
+          >
+            <Image
+              src={img_product_2}
+              alt="Product Shoes 2"
+              layout="fill"
+              role="button"
+            />
+          </div>
+          <div
+            className="[ product-image ] [ relative cursor-pointer ]"
+            title="Product 3"
+          >
+            <Image
+              src={img_product_3}
+              alt="Product Shoes 3"
+              layout="fill"
+              role="button"
+            />
+          </div>
+          <div
+            className="[ product-image ] [ relative cursor-pointer ]"
+            title="Product 4"
+          >
+            <Image
+              src={img_product_4}
+              alt="Product Shoes 4"
+              layout="fill"
+              role="button"
+            />
+          </div>
         </div>
       </div>
       <div className="product-details">
-        <p className="product-details-logo-name">Sneaker Company</p>
-        <h1 className="product-details-title">Fall Limited Edition Sneakers</h1>
+        {/* <p className="product-details-logo-name">Sneaker Company</p> */}
+        <h1 className="product-details-title">
+          Fall Limited Edition
+          <br /> Sneakers
+        </h1>
         <p className="product-detail">
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything

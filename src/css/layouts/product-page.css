@@ -1,4 +1,38 @@
+.container {
+  padding: 60px;
+  @media (--br-max-md) {
+    padding: 0px;
+  }
+}
+
 .product-page {
-  flex: 1;
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: row;
+
+  & .product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  & .product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    padding-block: 50px;
+  }
+
+  @media (--br-max-md) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (--br-md-only) {
+    flex-direction: column;
+  }
 }

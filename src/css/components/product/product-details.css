@@ -1,0 +1,17 @@
+.product-details {
+  position: relative;
+  & h1 {
+    line-height: 1.1;
+  }
+  &::before {
+    position: absolute;
+    color: var(--bg-primary);
+    content: "sneaker company";
+    text-transform: uppercase;
+    top: 0;
+    bottom: 0;
+    margin-top: 45px;
+    font-weight: var(--fw-bold);
+    font-size: 14px;
+  }
+}

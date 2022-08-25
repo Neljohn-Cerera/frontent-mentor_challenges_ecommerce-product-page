@@ -4,6 +4,9 @@
 @import "base/reset.css";
 @import "base/media-queries.css";
 @import "base/typography.css";
+/* components */
+@import "components/product/img.css";
+@import "components/product/product-details.css";
 /* layout */
 @import "layouts/header.css";
 @import "layouts/main.css";

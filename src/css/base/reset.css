@@ -18,7 +18,7 @@ html:focus-within {
 
 body {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   text-rendering: optimizeSpeed;
   font-family: var(--ff-main);
   background-color: var(--clr-neutral-100);
